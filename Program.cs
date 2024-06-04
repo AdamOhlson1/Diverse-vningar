@@ -14,7 +14,7 @@ Console.WriteLine(sum);
 */
 
 // Simple Calculator
- using System.Formats.Asn1;
+/* using System.Formats.Asn1;
 
 Console.WriteLine("Choose any number:\n");
 double num1 = Convert.ToDouble(Console.ReadLine());
@@ -33,6 +33,18 @@ Console.WriteLine($"Difference: {diff}");
 Console.WriteLine($"Product: {product}");
 Console.WriteLine($"Divsion: {div}");
 Console.WriteLine($"Power to: {pow}");
+*/
 
+// Fibonacci Sequence 
 
+int n = 50; 
+long a = 1, b = 1;
+
+for (int i = 1; i <= n; i++)
+{
+    Console.WriteLine(a);
+            long temp = a + b;
+            a = b;
+            b = temp;
+} 
 
