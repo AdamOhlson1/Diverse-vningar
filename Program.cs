@@ -36,15 +36,22 @@ Console.WriteLine($"Power to: {pow}");
 */
 
 // Fibonacci Sequence 
-
 int n = 50; 
 long a = 1, b = 1;
+int sum = 0; 
 
 for (int i = 1; i <= n; i++)
 {
-    Console.WriteLine(a);
+        Console.WriteLine(a);
             long temp = a + b;
             a = b;
             b = temp;
+// Få ut summan av alla jämna tal under 4 miljoner?
+        if (i % 2 == 0 || a <= 4000000)
+        {
+            sum += i; 
+        }
 } 
+Console.WriteLine(sum);
+
 
