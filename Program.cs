@@ -36,22 +36,63 @@ Console.WriteLine($"Power to: {pow}");
 */
 
 // Fibonacci Sequence 
-int n = 50; 
+/*int n = 50; 
+int m = 4000000;
+
 long a = 1, b = 1;
-int sum = 0; 
+long sum = 0; 
 
 for (int i = 1; i <= n; i++)
 {
         Console.WriteLine(a);
-            long temp = a + b;
+// Få ut summan av alla jämna tal under 4 miljoner?
+        if (i % 2 == 0 && a <= m)
+        {
+            sum += a; 
+        }
+
+    long temp = a + b;
             a = b;
             b = temp;
-// Få ut summan av alla jämna tal under 4 miljoner?
-        if (i % 2 == 0 || a <= 4000000)
-        {
-            sum += i; 
-        }
 } 
+
 Console.WriteLine(sum);
+*/
+
+
+// Palindrom 
+/* string? input = "";
+
+while (string.IsNullOrEmpty(input)) 
+{
+Console.WriteLine("Enter a word or sentence:\n ");
+input = Console.ReadLine();
+
+if (string.IsNullOrEmpty(input))
+{
+    Console.WriteLine("Invalid input");
+}
+}
+
+if (IsPalindrom(input))
+        {
+            Console.WriteLine("The text is a palindrom.");
+        }
+        else
+        {
+            Console.WriteLine("The text is not a palindrom.");
+        }
+    
+
+  static bool IsPalindrom(string text)
+    {
+        
+        var rensadText = new string(text.Where(char.IsLetterOrDigit).ToArray()).ToLower();
+        
+        var omvändText = new string(rensadText.Reverse().ToArray());
+
+        return rensadText == omvändText;
+    } */
+
 
 
