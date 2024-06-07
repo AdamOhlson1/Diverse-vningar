@@ -106,7 +106,7 @@ if (IsPalindrom(input))
     } */
 
 // Räkna ut median, medelvärde
-
+/*
 int numPerson = 20; 
 int maxAge = 100; 
 int minAge = 1; 
@@ -152,7 +152,22 @@ else
     median = ages[middle];
 }
 
-Console.WriteLine("Median is: "+ median);
+Console.WriteLine("Median is: "+ median); */
+
+// Sortera strängar 
+/*using System.Linq;
+
+string[] pets = { "Dog", "Cat", "Parrot", "Ginuea Pig", "Hamster", "Turtle", "Fish", "Horse", "Crab" };
+
+
+var sortedPets = pets.OrderBy(p => p.Length).ThenBy(p => p);
+
+
+foreach (var pet in sortedPets)
+{
+    Console.WriteLine(pet);
+}*/
+
 
 
 
