@@ -36,29 +36,40 @@ Console.WriteLine($"Power to: {pow}");
 */
 
 // Fibonacci Sequence 
-/*int n = 50; 
-int m = 4000000;
+/*    int n = 50; 
+    int m = 4000000; 
 
-long a = 1, b = 1;
-long sum = 0; 
+    long a = 1, b = 1;
+    long sum = 0;
 
-for (int i = 1; i <= n; i++)
-{
+
+    for (int i = 1; i <= n; i++)
+    {
         Console.WriteLine(a);
-// Få ut summan av alla jämna tal under 4 miljoner?
-        if (i % 2 == 0 && a <= m)
+        if (a % 2 == 0 && a <= m)
         {
-            sum += a; 
+            sum += a;
         }
 
-    long temp = a + b;
-            a = b;
-            b = temp;
-} 
+        long temp = a + b;
+        a = b;
+        b = temp;
+    }
 
-Console.WriteLine(sum);
+    while (a <= m)
+    {
+        if (a % 2 == 0)
+        {
+            sum += a;
+        }
+
+        long temp = a + b;
+        a = b;
+        b = temp;
+    }
+
+    Console.WriteLine(sum);
 */
-
 
 // Palindrom 
 /* string? input = "";
@@ -93,6 +104,55 @@ if (IsPalindrom(input))
 
         return rensadText == omvändText;
     } */
+
+// Räkna ut median, medelvärde
+
+int numPerson = 20; 
+int maxAge = 100; 
+int minAge = 1; 
+
+Random rnd = new Random();
+int[] ages = new int[numPerson];
+
+for (int i = 0; i < numPerson; i++)
+{
+    ages[i] = rnd.Next(minAge, maxAge + 1);
+}
+
+foreach (int age in ages)
+{
+    Console.WriteLine(age);
+}
+
+int sum = 0; 
+
+foreach (int a in ages) 
+{
+    sum += a; 
+}
+
+double average = Math.Round((double)sum / ages.Length);
+
+Console.WriteLine("Average is: " + average);
+
+Array.Sort(ages);
+
+double median;
+int n = ages.Length;
+
+if (n % 2 == 0)
+{
+    int middle1 = n / 2 - 1;
+    int middle2 = n/ 2; 
+    median = (ages[middle1] + ages[middle2]) / 2.0;
+}
+else 
+{
+    int middle = n / 2;
+    median = ages[middle];
+}
+
+Console.WriteLine("Median is: "+ median);
 
 
 
