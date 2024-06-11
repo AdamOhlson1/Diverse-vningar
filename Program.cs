@@ -162,12 +162,26 @@ string[] pets = { "Dog", "Cat", "Parrot", "Ginuea Pig", "Hamster", "Turtle", "Fi
 
 var sortedPets = pets.OrderBy(p => p.Length).ThenBy(p => p);
 
+var reversedSortedPets = sortedPets.Reverse();
 
-foreach (var pet in sortedPets)
+
+foreach (var pet in reversedSortedPets)
 {
     Console.WriteLine(pet);
 }*/
 
+// Sortera strängar 2
+/*using System.Linq;
 
+string[] footballPlayers = {"Lionel Messi", "Cristiano Ronaldo", "Neymar Jr.", "Kylian Mbappé", 
+"Robert Lewandowski", "Kevin De Bruyne", "Virgil van Dijk", "Mohamed Salah", "Harry Kane", 
+"Eden Hazard", "Luka Modrić", "Sergio Ramos", "NGolo Kanté", "Karim Benzema", "Manuel Neuer", 
+"Antoine Griezmann", "Romelu Lukaku", "Paulo Dybala", "Gianluigi Buffon", "Zlatan Ibrahimović", 
+"Erling Haaland", "Jadon Sancho", "Trent Alexander-Arnold", "Sadio Mané", "Raheem Sterling" };
 
+var sortedPlayers = footballPlayers.OrderBy(f => f);
 
+foreach (var players in sortedPlayers)
+{
+    Console.WriteLine(players);
+}*/
