@@ -185,3 +185,38 @@ foreach (var players in sortedPlayers)
 {
     Console.WriteLine(players);
 }*/
+
+// BlackJack 
+/*
+static List<int> deck = new List<int>();
+static int balance = 100;
+
+Console.WriteLine("Hello welcome to Black Jack \nYour balance is " + balance + "kr");
+
+Console.WriteLine("How much do you want to bet?\n");
+int bet = Convert.ToInt32(Console.ReadLine());
+
+while (bet > balance || bet == 0 || bet < 0)
+            {
+                if (bet > balance)
+                {
+                    Console.WriteLine("You cannot bet more than your balance. Enter a valid bet: ");
+                }
+                else
+                {
+                    Console.WriteLine("You cannot bet zero or below. Enter another bet: ");
+                }
+
+                bet = Convert.ToInt32(Console.ReadLine());
+            }
+BlackJack();
+
+
+
+static void BlackJack()
+{
+    Console.WriteLine("Shuffeling cards...");
+    Thread.Sleep(5000);
+
+} */
+
