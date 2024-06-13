@@ -187,9 +187,9 @@ foreach (var players in sortedPlayers)
 }*/
 
 // BlackJack 
-/*
-static List<int> deck = new List<int>();
-static int balance = 100;
+
+List<int> deck = new List<int>();
+int balance = 500;
 
 Console.WriteLine("Hello welcome to Black Jack \nYour balance is " + balance + "kr");
 
@@ -213,10 +213,81 @@ BlackJack();
 
 
 
-static void BlackJack()
+void BlackJack()
 {
     Console.WriteLine("Shuffeling cards...");
     Thread.Sleep(5000);
 
-} */
+    Initialize();
+    shuffleDeck();
 
+    int randCard = drawCard();
+    int sum = randCard + randCard;
+
+    while(sum < 21)
+    {
+        Console.WriteLine($"You drew { randCard } and { randCard }");
+        Console.WriteLine($"Your sum is {sum}, do you want another card?");
+        string answer = Console.ReadLine();
+
+    if(answer = 'yes')
+    {
+        Console.WriteLine($"Your new card is { randCard }");
+    }
+    else
+    {
+        break;
+    }
+    }
+    
+    int dealCard1 = drawCard();
+    int dealCard2 = drawCard();
+    int dealSum = dealCard1 + dealCard2;
+
+    Console.WriteLine($"The dealers sum is: {dealSum}");
+
+    if (sum > dealSum)
+    {
+        Console.WriteLine("Congratulations you won");
+    }
+    else if(sum < dealSum)
+    {
+        Console.WriteLine("Sorry you lost");
+    }
+    else 
+    {
+        Console.WriteLine("It's a draw");
+    }
+
+} 
+
+void Initialize()
+{
+    deck.Clear();
+    
+    for(int i = 1; i <= 11; i++)
+    {
+        for(int j = 0; j < 4; j++)
+        {
+            deck.Add(i);
+        }
+    }
+}
+
+void shuffleDeck()
+{
+    Random rnd = new Random();
+    deck = deck.OrderBy(x => rnd.Next()).ToList();
+}
+
+int drawCard()
+{
+    if(deck.Count == 0)
+    {
+        throw new InvalidOperationException("No more cards in deck");
+    }
+
+    int card = deck[0];
+    deck.RemoveAt(0);
+    return card;
+}
